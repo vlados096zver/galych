@@ -1,0 +1,176 @@
+.project {
+	position: relative;
+	z-index: 2;
+	margin-top: -120px;
+	padding-bottom: 75px;
+}
+
+.project__elem {
+	font-size: 36px;
+	line-height: 1.43;
+	color: #fff;
+	padding-bottom: 10px;
+	font-weight: 700;
+}
+
+.project__page {
+	margin-top: 0;
+}
+
+.project__item {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.project__item .project__box:first-child {
+	width: calc(100% - 410px);
+	margin-right: 40px;
+}
+
+.project__item .project__box:last-child {
+	width: 370px;
+}
+
+.project__item .project__box:only-child {
+	width: 100%;
+	margin: 0 0 40px;
+}
+
+.project__item:nth-child(2n) .project__box:first-child {
+	width: 370px;
+}
+
+.project__item:nth-child(2n) .project__box:last-child {
+	width: calc(100% - 410px);
+}
+
+.project__item:nth-child(2n) .project__box:only-child {
+	width: 100%;
+	margin: 0 0 40px;
+}
+
+.project__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 40px;
+	min-height: 375px;
+}
+
+.project__text {
+	padding: 0 19px;
+}
+
+.project__title {
+	font-size: 32px;
+	line-height: 1.2;
+	color: #fff;
+	padding-bottom: 20px;
+	font-weight: 800;
+}
+
+.project__desc {
+	margin-top: -13px;
+	padding-bottom: 20px;
+}
+
+.project__desc p {
+	font-size: 24px;
+	line-height: 1.25;
+	color: #fff;
+	font-weight: 500;
+}
+
+@media screen and (max-width: 1050px) {
+
+.project {
+	padding-bottom: 40px;
+}
+
+.project__page {
+	margin-top: 0;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.project__item .project__box:first-child {
+	width: calc(100% - 395px);
+	margin-right: 25px;
+}
+
+.project__item:nth-child(2n) .project__box:last-child {
+	width: calc(100% - 395px);
+	margin-right: 0;
+}
+
+.project__box {
+	margin-bottom: 25px;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.project {
+	padding: 0 0 22px;
+	margin-top: -80px;
+}
+
+.project__elem {
+	font-size: 20px;
+}
+
+.project__page {
+	margin-top: 0;
+}
+
+.project__item .project__box:first-child {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.project__item .project__box:last-child {
+	width: 100%;
+}
+
+.project__item:nth-child(2n) .project__box:first-child {
+	width: 100%;
+}
+
+.project__item:nth-child(2n) .project__box:last-child {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.project__item:nth-child(3n) .project__box:first-child {
+	min-height: 295px;
+}
+
+.project__box {
+	min-height: 295px;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.project__text {
+	padding: 0 15px;
+}
+
+.project__title {
+	font-size: 24px;
+}
+
+.project__desc p {
+	font-size: 14px;
+}
+
+}
+

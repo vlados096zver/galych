@@ -1,0 +1,132 @@
+@import 'responsive'
+
+.project
+	position: relative
+	z-index: 2
+	margin-top: -120px
+	padding-bottom: 75px
+	+media(mdx)
+		padding-bottom: 40px
+	+media(sm)	
+		padding: 0 0 22px
+		margin-top: -80px
+
+	&__elem
+		font-size: 36px
+		line-height: 1.43
+		color: #fff
+		padding-bottom: 10px
+		font-weight: 700
+		+media(sm)
+			font-size: 20px
+
+	&__page
+		margin-top: 0
+		+media(mdx)
+			margin-top: 0
+		+media(sm)
+			margin-top: 0
+
+
+	&__item
+		display: flex
+		flex-wrap: wrap
+
+		.project__box:first-child
+			width: calc(100% - 410px)
+			margin-right: 40px
+			+media(md)
+				width: calc(100% - 395px)
+				margin-right: 25px
+			+media(sm)
+				width: 100%
+				margin: 0 auto
+				margin-bottom: 25px
+
+		.project__box:last-child
+			width: 370px
+			+media(sm)
+				width: 100%
+
+		.project__box:only-child
+			width: 100%
+			margin: 0 0 40px
+
+		&:nth-child(2n - 1)
+			.project__box:first-child
+				+media(sm)
+					// min-height: 160px
+
+
+		&:nth-child(2n)
+			.project__box:first-child
+				width: 370px
+				+media(sm)
+					width: 100%
+					// min-height: 160px
+
+			.project__box:last-child
+				width: calc(100% - 410px)
+				+media(md)
+					width: calc(100% - 395px)
+					margin-right: 0
+				+media(sm)
+					width: 100%
+					// min-height: 160px
+					margin: 0 auto
+					margin-bottom: 25px
+
+			.project__box:only-child
+				width: 100%
+				margin: 0 0 40px
+
+		&:nth-child(3n)
+			.project__box:first-child
+				+media(sm)
+					min-height: 295px
+
+			.project__box:last-child
+				+media(sm)
+					// min-height: 160px
+
+	&__box
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		margin-bottom: 40px
+		min-height: 375px
+		+media(md)
+			margin-bottom: 25px
+		+media(sm)
+			min-height: 295px
+			max-width: 500px
+			margin: 0 auto
+			margin-bottom: 25px
+
+	&__text
+		padding: 0 19px
+		+media(sm)
+			padding: 0 15px
+
+	&__title
+		font-size: 32px
+		line-height: 1.2
+		color: #fff
+		padding-bottom: 20px
+		font-weight: 800
+		+media(sm)
+			font-size: 24px
+
+	&__desc
+		margin-top: -13px
+		padding-bottom: 20px
+		p
+			font-size: 24px
+			line-height: 1.25
+			color: #fff
+			font-weight: 500
+			+media(sm)
+				font-size: 14px

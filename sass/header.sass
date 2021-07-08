@@ -1,0 +1,297 @@
+@import 'responsive'
+
+.main-header
+	position: relative
+	background-color: #e74011
+	background-image: url(img/bg-header.svg)
+	background-size: cover
+	background-repeat: no-repeat
+	+media(sm)
+		padding: 0 15px
+	&--inner
+		background-color: #fff
+		background-image: none
+		.line-burger
+			background-color: #292929
+
+		.main-header__list
+			background-color: #fff
+			
+		.main-header__link
+			color: #292929
+			&--active
+				border-bottom-color: #292929
+
+				&:hover
+					color:  #292929
+
+	&--blog
+		.main-header__holder
+			justify-content: center
+			+media(sm)
+				justify-content: flex-start
+
+		.main-header__list
+			li:not(:last-child) .main-header__link
+				margin-right: 40px
+
+		.main-header__logo
+			display: none
+			+media(sm)
+				display: block
+
+	&__holder
+		position: relative
+		display: flex
+		align-items: center
+		padding-top: 70px
+		+media(sm)
+			padding-top: 32px
+
+	&__elem
+		max-width: 900px
+		padding-top: 110px
+		+media(sm)
+			padding-top: 92px
+
+	&__desc
+		transform-origin: center bottom
+		padding-bottom: 67px
+		+media(sm)
+			padding-bottom: 40px
+
+		.animation_title
+			display: inline-block
+			min-height: 70px
+			border-right: 10px solid #fff
+			padding-right: 10px
+			animation: lineText 0.7s 8 0.5s
+			+media(lgxs)
+				min-height: 50px
+			+media(sm)
+				min-height: 36px
+				border-right-width: 6px
+				padding-right: 5px
+
+		// .animation_title-1,
+		// .animation_title-2,
+		// .animation_title-3
+		// 	position: relative
+		// 	left: 100px
+		// 	opacity: 0
+
+		p
+			font-size: 72px
+			line-height: 1.2
+			color: #fff
+			font-weight: bold
+			+media(lgxs)
+				font-size: 48px
+			+media(sm)
+				font-size: 36px
+
+	&__different
+		display: block
+		color: #292929
+
+	&__point
+		// display: inline-block
+		// position: relative
+		// top: 20px
+		// width: 10px
+		// height: 0
+		// +media(sm)
+		// 	width: 6px
+
+		// &:after
+		// 	position: absolute
+		// 	content: ''
+		// 	top: -80px
+		// 	width: inherit
+		// 	height: 80px
+		// 	background-color: #fff
+		// 	+media(lgxs)
+		// 		top: -60px
+		// 		height: 50px
+		// 	+media(sm)
+		// 		top: -50px
+		// 		height: 40px
+
+	&__text
+		max-width: 575px
+		padding-bottom: 190px
+		+media(sm)
+			padding-bottom: 130px
+		p
+			font-size: 18px
+			line-height: 1.35
+			color: #fff
+			font-family: Avenir
+			font-weight: 500
+			
+	&__block
+		position: relative
+
+	&__line,
+	&__decor
+		position: absolute
+		svg
+			display: block
+			path
+				fill: #fff
+				
+	&__line
+		right: 115px
+		top: 300px
+		height: 42px
+		overflow: hidden
+		animation: mainArrow 4s infinite
+		+media(lgxs)
+			display: none
+
+	&__decor
+		right: 0px
+		top: 495px
+		height: 90px
+		overflow: hidden
+		animation: smallArrow 4s infinite
+		+media(lgxs)
+			display: none
+
+	&__wrap
+		+media(sm)
+			order: -1
+
+	&__list
+		display: flex
+		align-items: center
+		+media(sm)
+			display: none
+			width: calc(100% + 30px)
+			top: 100%
+			left: -15px
+			z-index: 5
+			position: absolute
+			max-height: calc(100vh - 70px)
+			background-color: #e74011
+			padding: 10px 15px
+			padding-top: 20px	
+			overflow-y: auto
+			overflow-x: hidden
+		li:not(:last-child) .main-header__link
+			margin-right: 30px
+			+media(md)
+				margin-right: 22px
+			+media(sm)
+				margin-right: 0px
+
+	&__link
+		display: block
+		font-size: 15px
+		line-height: 1.2
+		color: #fff
+		border-bottom: 2px solid transparent
+		padding-bottom: 8px
+		font-weight: 700
+		transition: 0.3s color
+		+media(sm)
+			margin-bottom: 10px	
+
+		&:hover
+			color: #333
+
+		&--active
+			border-bottom: 2px solid #fff
+			&:hover
+				color: #fff
+
+		&--image
+			+media(sm)
+				display: none
+
+
+	&__logo
+		display: block
+		margin-right: 80px
+		max-width: 145px
+		+media(md)
+			max-width: 95px
+			margin-right: 40px
+		+media(sm)
+			max-width: 75px
+			margin-right: 0px	
+			position: absolute
+			top: 45px
+			left: 50%
+			transform: translateY(-50%)
+		img
+			display: block
+
+	&__aside
+		position: absolute
+		writing-mode: vertical-rl
+		transform: rotate(-180deg)
+		top: calc(50% - 110px)
+		right: -81px
+		font-size: 15px
+		line-height: 1.2
+		font-family: roboto
+		font-weight: 700
+		+media(lg)
+			right: -50px
+		+media(lgm)
+			display: none
+
+		a
+			color: #292929
+
+.mobile-wrap
+	display: none
+	align-items: center
+	justify-content: space-between
+	cursor: pointer
+	+media(sm)
+		display: flex
+		width: 100%
+		max-width: 20px
+
+.line-burger
+	position: relative
+	top: 0px
+	display: block
+	width: 20px
+	height: 2px
+	background-color: #fff
+	transition: all ease-in-out 0.5s
+
+.line-burger:not(:last-child)
+	margin-bottom: 4px
+
+.line-burger:nth-child(1),
+.line-burger:nth-child(3)
+	width: 10px
+
+.main-nav__toggle
+	position: relative
+	cursor: pointer
+	display: none
+	+media(sm)
+		display: block
+
+	&.open
+		.line-burger:nth-child(2),
+		.line-burger:nth-child(3)
+			width: 0px	
+			opacity: 0
+
+		.line-burger:nth-child(1)
+			transform: rotate(-45deg)
+			top: 9px
+
+		.line-burger:nth-child(4)
+			transform: rotate(45deg)
+			top: -9px
+
+		.line-burger:nth-child(1)
+			width: 20px
+ 

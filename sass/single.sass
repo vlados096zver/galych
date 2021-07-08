@@ -1,0 +1,198 @@
+@import 'responsive'
+
+.single
+	position: relative
+	padding-bottom: 120px
+	+media(md)
+		padding-bottom: 95px
+	+media(sm)
+		padding-bottom: 65px
+	&__tabs
+		position: relative
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		align-items: center
+		background-color: #e74011
+		border: 2px solid #e74011
+		border-radius: 5px
+		overflow: hidden
+		+media(md)
+			background-color: transparent
+			border-color: transparent
+			justify-content: flex-start
+			padding-bottom: 13px
+
+	&__box
+		position: relative
+		z-index: 3
+		user-select: none
+		cursor: pointer
+		font-size: 24px
+		line-height: 1.2
+		color: #fff
+		padding: 0 15px
+		padding-top: 7px
+		padding-bottom: 11px
+		font-weight: bold
+		+media(lgs)
+			font-size: 19px
+		+media(mdx)
+			font-size: 17px
+		+media(md)
+			color: #292929
+		+media(sm)
+			font-size: 14px
+			padding: 5px 10px
+			margin-bottom: 13px
+			font-family: Avenir
+			font-weight: 800
+		&:not(:last-child)
+			margin-right: 37px
+			+media(md)	
+				margin-right: 8px
+			+media(sm)
+				margin-right: 3px
+		&--active
+			background-color: #fff
+			color: #e74011
+			+media(md)
+				background-color: #e74011
+				color: #fff
+
+		&:first-child
+			+media(sm)	
+				order: 2
+
+		&:last-child
+			+media(sm)	
+				order: 3
+
+	.stages__number
+		display: none
+
+	.stages__subtitle
+		padding-left: 0px
+
+	&__elem
+		padding-top: 20px
+		padding-bottom: 33px
+		+media(sm)
+			padding-top: 0px
+			padding-bottom: 60px
+		p
+			font-size: 36px
+			line-height: 1.2
+			color: #292929
+			font-weight: bold
+			+media(md)
+				font-size: 30px
+			+media(sm)
+				font-size: 20px
+
+	&__item
+		padding-top: 28px
+		+media(md)
+			padding-top: 12px
+		&:first-child
+			+media(sm)	
+				order: 2
+
+		&:last-child
+			+media(sm)	
+				order: 3
+
+
+	&__aside
+		position: absolute
+		writing-mode: vertical-rl
+		transform: rotate(-180deg)
+		bottom: -110px
+		right: -80px
+		font-size: 15px
+		line-height: 1.2
+		font-family: roboto
+		font-weight: 700
+		+media(lg)
+			right: -50px
+		+media(lgm)
+			display: none
+
+		a
+			color: #292929
+	
+.text
+	padding-top: 100px
+	padding-bottom: 70px
+
+	&__aside
+		position: absolute
+		writing-mode: vertical-rl
+		transform: rotate(-180deg)
+		top: 30px
+		right: -81px
+		font-size: 15px
+		line-height: 1.2
+		color: #292929
+		font-family: Roboto
+		font-weight: bold
+		+media(lg)
+			right: -40px
+		+media(lgm)
+			display: none
+
+		a
+			color: #292929
+
+	&__title
+		font-size: 48px	
+		line-height: 1.1
+		padding-bottom: 30px
+		font-weight: bold
+		+media(sm)
+			font-size: 36px		
+
+	&__img
+		img
+			display: block
+			max-width: 100%
+			margin: 0 auto 30px
+
+	&__content
+		p
+			font-size: 18px
+			line-height: 1.35
+			color: #292929
+			font-family: Avenir
+			font-weight: 500
+			margin-bottom: 1em
+
+		h1, h2, h3, h4, h5, h6
+			margin-bottom: 0.5em
+
+		h1
+			font-size: 30px
+		h2
+			font-size: 26px
+		h3
+			font-size: 22px
+		h4, h5, h6
+			font-size: 18px
+
+		li
+			list-style-position: inside
+			font-size: 18px
+			line-height: 1.35
+			color: #292929
+			font-family: Avenir
+			font-weight: 500
+
+		ul, ol
+			padding: 0.5em 0 0.5em 1em
+			margin: 0
+
+		ol > li
+			list-style-type: decimal
+
+		ul > li
+			list-style-type: disc
