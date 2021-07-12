@@ -97,24 +97,21 @@
 	padding-bottom: 32px;
 }
 
-.page-project__item .page-project__list li {
+.page-project__item .page-project__list .page-project__box {
+	cursor: pointer;
+	display: inline-block;
 	font-size: 18px;
 	color: #292929;
 	padding-left: 0px;
+	text-decoration: underline;
 	font-weight: 500;
 }
 
-.page-project__item .page-project__list li:after {
+.page-project__item .page-project__list .page-project__box:after {
 	display: none;
 }
 
-.page-project__item .page-project__list li a {
-	display: inline-block;
-	color: inherit;
-	text-decoration: underline;
-}
-
-.page-project__item .page-project__list li a:hover {
+.page-project__item .page-project__list .page-project__box:hover {
 	text-decoration: none;
 }
 

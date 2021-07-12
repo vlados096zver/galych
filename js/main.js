@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+ $(".page-project__box").click(function() {
+    $(".page-project__box").removeClass("page-project__box--active").eq($(this).index()).addClass("page-project__box--active");
+    var index = $(this).index();
+    $(".gallery__wrap").hide().eq(index).fadeIn()
+  });
+
 $('.mobile-wrap').on('click', function () {
     $(this).find('.main-nav__toggle').toggleClass('open');
     $('.main-header__list').slideToggle();
