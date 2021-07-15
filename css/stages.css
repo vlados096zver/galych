@@ -163,6 +163,8 @@
 
 .stages__logo {
 	width: 150px;
+	align-self: flex-start;
+	margin-top: 40px;
 }
 
 .stages__logo img {

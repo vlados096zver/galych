@@ -4,6 +4,8 @@
 	position: relative
 	padding-top: 58px
 	margin-bottom: 80px
+	+media(sm)
+		margin-bottom: 5px
 	&__col
 		position: relative
 
@@ -26,7 +28,8 @@
 				width: 300px
 				max-width: 270px
 			+media(sm)
-				display: none
+				width: 100%
+				max-width: 100%	
 
 			p
 				white-space: pre-wrap
@@ -98,13 +101,15 @@
 				font-size: 18px
 				color: #292929
 				padding-left: 0px
-				text-decoration: underline
 				font-weight: 500
 				&:after
 					display: none
 					
 				&:hover
-					text-decoration: none
+					text-decoration: underline
+
+				&.page-project__box--active
+					text-decoration: underline
 
 		p
 			font-size: 18px

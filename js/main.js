@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".page-project__box").removeClass("page-project__box--active").eq($(this).index()).addClass("page-project__box--active");
     var index = $(this).index();
     $(".gallery__wrap").hide().eq(index).fadeIn()
-  });
+  }).eq(0).addClass("page-project__box--active");
 
 $('.mobile-wrap').on('click', function () {
     $(this).find('.main-nav__toggle').toggleClass('open');

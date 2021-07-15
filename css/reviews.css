@@ -32,7 +32,6 @@
 
 .reviews__box {
 	outline: none;
-	padding-bottom: 42px;
 }
 
 .reviews__image {
@@ -112,7 +111,7 @@
 .reviews__arrows {
 	display: flex;
 	position: absolute;
-	bottom: 35px;
+	bottom: -4px;
 	right: 0px;
 }
 
@@ -212,10 +211,6 @@
 	font-size: 20px;
 }
 
-.reviews__box {
-	padding-bottom: 48px;
-}
-
 .reviews__image {
 	margin-bottom: 16px;
 }
@@ -239,7 +234,6 @@
 
 .reviews__info p {
 	font-size: 14px;
-	color: #292929;
 }
 
 .reviews .slick-list {
@@ -248,10 +242,6 @@
 
 .reviews .slick-slide {
 	margin: 0px;
-}
-
-.reviews__arrows {
-	display: none;
 }
 
 }

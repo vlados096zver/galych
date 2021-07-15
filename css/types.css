@@ -8,13 +8,10 @@
 }
 
 .types__item {
-	width: 25%;
+	width: calc(25% - 8px);
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	padding-top: 27%;
-	min-height: 396px;
+	display: block;
+	margin: 4px;
 }
 
 .types__item:after {
@@ -37,17 +34,12 @@
 }
 
 .types__image {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	top: 0px;
+	position: static;
 	width: 100%;
-	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
-	padding: 0 40px;
-	padding-bottom: 22px;
+	background-position: center;
+	padding-top: 100%;
 }
 
 .types__title {
@@ -101,7 +93,6 @@
 
 .types__item {
 	width: 100%;
-	padding-top: 112%;
 }
 
 .types__image {

@@ -103,7 +103,6 @@
 	font-size: 18px;
 	color: #292929;
 	padding-left: 0px;
-	text-decoration: underline;
 	font-weight: 500;
 }
 
@@ -112,7 +111,11 @@
 }
 
 .page-project__item .page-project__list .page-project__box:hover {
-	text-decoration: none;
+	text-decoration: underline;
+}
+
+.page-project__item .page-project__list .page-project__box.page-project__box--active {
+	text-decoration: underline;
 }
 
 .page-project__item p {
@@ -178,8 +181,13 @@
 
 @media screen and (max-width: 780px) {
 
+.page-project {
+	margin-bottom: 5px;
+}
+
 .page-project__item--content {
-	display: none;
+	width: 100%;
+	max-width: 100%;
 }
 
 .page-project__title {
