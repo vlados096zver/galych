@@ -12,16 +12,18 @@
 	&__wrap
 		display: flex
 		flex-wrap: wrap
-		align-items: center
 		margin: 0 -20px
 
 	&__item
 		width: calc(100% / 2 - 40px)
 		flex-grow: 1
 		margin: 0 20px
+		+media(sm)
+			margin-top: 20px
 
 		&--content 
 			margin-bottom: 30px
+			margin-top: 45px
 			+media(lgxs)
 				width: 350px
 			+media(md)
@@ -83,7 +85,7 @@
 				padding-left: 20px
 				margin-bottom: 14px
 				font-family: Avenir
-				font-weight: 800
+				font-weight: 700
 				&:after
 					position: absolute
 					content: '+'
@@ -135,3 +137,12 @@
 
 		a
 			color: #292929
+
+.mobile__hidden
+	+media(sm)
+		display: none
+
+.mobile__visible
+	display: none
+	+media(sm)
+		display: block

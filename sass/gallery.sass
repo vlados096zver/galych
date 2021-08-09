@@ -1,8 +1,14 @@
 @import 'responsive'
 
 .gallery
+
+	.reviews__link
+		+media(sm)
+			width: 100%
+			max-width: 100%
+			margin-bottom: 40px
+
 	&__wrap
-		padding-bottom: 40px
 		
 	&__row
 		display: flex
@@ -10,6 +16,11 @@
 		padding-bottom: 40px
 
 		&--center
+			max-width: 810px
+			width: 100%	
+			margin: 0 auto
+			+media(sm)
+				max-width: 100%
 			.gallery__item
 				width: 100%
 				max-height: none
@@ -52,12 +63,14 @@
 				
 
 	&__item
+		position: relative
 		max-height: 480px
 		+media(md)
 			max-height: none
 
 		video
 			width: 100%
+			height: 100%
 
 		img
 			display: block
@@ -65,6 +78,8 @@
 			height: 100%
 			object-fit: cover
 			object-position: center
+
+	
 
 		// background-repeat: no-repeat
 		// background-size: cover
@@ -84,3 +99,4 @@
 		// 	+media(sm)
 		// 		width: 100%
 		// 		padding-top: 98%
+

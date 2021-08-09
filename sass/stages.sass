@@ -247,6 +247,7 @@
 				top: calc(50% - 12px)
 
 	&__subtitle
+		position: relative
 		font-size: 36px
 		line-height: 1.2
 		color: #333
@@ -256,6 +257,13 @@
 			font-size: 20px
 			text-align: center
 			padding-left: 25px
+
+		&:before
+			counter-increment: list
+			content: counter(list) ". "
+			font-size: inherit
+			color: #e74011
+			font-weight: bold
 		
 	&__text
 		p

@@ -9,13 +9,16 @@
 		padding-bottom: 45px
 	&--inner
 		padding-top: 70px
+		+media(mdx)
+			padding-bottom: 58px
 		+media(sm)
 			padding-top: 60px
+			padding-bottom: 58px
 		.services__wrap
 			padding: 0 50px
 			+media(lgs)
 				padding: 0 20px
-			+media(sm)
+			+media(lgxs)
 				padding: 0px
 	&__col
 		position: relative
@@ -45,6 +48,16 @@
 		+media(sm)
 			font-size: 18px
 
+	&__col
+		.services__title	
+			width: 480px
+			margin: 0 50px
+			+media(lgs)
+				margin: 0px 20px
+			+media(lgxs)
+				width: 100%
+				margin: 0px
+
 	&__text
 		padding-top: 30px
 		+media(sm)
@@ -62,17 +75,17 @@
 		span
 			display: inline-block
 			color: #e74011
+			margin-left: -8px
+			+media(sm)
+				margin-left: -5px
 
 	&__desc
 		max-width: 475px
-		padding-top: 36px
 		margin-left: auto
 		+media(lgxs)
 			margin-left: 0px
 			max-width: initial
-		+media(sm)
 			padding-top: 25px
-			padding-right: 0px
 		p
 			font-size: 18px
 			line-height: 1.35

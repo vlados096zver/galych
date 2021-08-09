@@ -15,13 +15,18 @@
 		align-items: center
 		background-color: #e74011
 		border: 2px solid #e74011
-		// border-radius: 5px
 		overflow: hidden
 		+media(md)
 			background-color: transparent
 			border-color: transparent
 			justify-content: flex-start
 			padding-bottom: 13px
+		+media(sm)
+			max-width: 330px
+			margin: 0 auto
+		+media(mini)
+			margin: 0 -10px
+
 
 	&__box
 		position: relative
@@ -43,16 +48,21 @@
 			color: #292929
 		+media(sm)
 			font-size: 14px
-			padding: 5px 10px
+			padding: 5px 8px
 			margin-bottom: 13px
 			font-family: Avenir
-			font-weight: 800
+			font-weight: 700
+		+media(mini)
+
 		&:not(:last-child)
 			margin-right: 37px
 			+media(md)	
 				margin-right: 8px
 			+media(sm)
 				margin-right: 3px
+			+media(mini)
+				margin-right: 0
+
 		&--active
 			background-color: #fff
 			color: #e74011

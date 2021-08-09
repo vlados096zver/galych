@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    $('.main-header__link[href^="#"]').click(function(){
+    var target = $(this).attr('href');
+    $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+    return false;
+  });
+
  $(".page-project__box").click(function() {
     $(".page-project__box").removeClass("page-project__box--active").eq($(this).index()).addClass("page-project__box--active");
     var index = $(this).index();
@@ -84,6 +90,7 @@ $(".single__box").click(function () {
     var index = $(this).index();
     $(".single__box").removeClass("single__box--active").eq(index).addClass("single__box--active");
     $(".single__item").hide().eq(index).show();
+     $(".services__wrap").hide().eq(index).show()
     history.pushState({slug: tab, index: index}, '', link + '?way=' + tab);
 });
 
