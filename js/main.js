@@ -52,7 +52,7 @@ clients_slider.slick({
     dots: false,
     arrows: false,
     responsive: [{
-            breakpoint: 960,
+            breakpoint: 780,
             settings: {
                slidesPerRow: 2,
                rows: 4
