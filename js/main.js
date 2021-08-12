@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $('.main-header__link[href^="#"]').click(function(){
     var target = $(this).attr('href');
-    $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+    $('html, body').animate({scrollTop: $(target).offset().top - $('.main-header__menu').height()}, 800);
     return false;
   });
 
@@ -44,6 +44,30 @@ $(window).resize(function () {
     }, 1000);
 })();
 
+let clients_slider = $('.clients__holder');
+clients_slider.slick({
+    slidesPerRow: 3,
+    rows: 3,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    responsive: [{
+            breakpoint: 960,
+            settings: {
+               slidesPerRow: 2,
+               rows: 4
+            }
+        }
+    ]
+});
+
+$('.clients__arrow--dir_left').click(function(){
+    $('.clients__holder').slick("slickPrev");
+})
+
+$('.clients__arrow--dir_right').click(function(){
+    $('.clients__holder').slick("slickNext");
+})
 
 let slider = $('.reviews__slider');
 
@@ -63,7 +87,7 @@ slider.slick({
     dots: false,
     arrows: true,
     appendArrows: $('.reviews__arrows'),
-    prevArrow: '<button class="reviews__arrow reviews__arrow--dir_left"></div>',
+    prevArrow: '<button class="reviews__arrow reviews__arrow--dir_left"></button>',
     nextArrow: '<button class="reviews__arrow reviews__arrow--dir_right"></button>',
 
     responsive: [{

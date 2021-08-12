@@ -3,11 +3,28 @@
 .main-header
 	position: relative
 	background-color: #e74011
-	background-image: url(img/bg-header.svg)
-	background-size: cover
-	background-repeat: no-repeat
+	
 	+media(sm)
 		padding: 0 15px
+	&:after
+		position: absolute
+		pointer-events: none
+		content: ' '
+		width: 100%
+		height: 100%
+		z-index: 13
+		top: 0px
+		left: 0px
+		background-image: url(img/bg-header.svg)
+		background-size: cover
+		background-repeat: no-repeat
+
+	&__menu
+		padding-bottom: 15px
+		background-color: #e74011
+		+media(sm)
+			padding-bottom: 20px
+
 	&--inner
 		background-color: #fff
 		background-image: none
@@ -24,6 +41,24 @@
 
 				&:hover
 					color:  #292929
+
+		.main-header__menu
+			position: fixed
+			z-index: 12
+			top: 0px
+			left: 0px
+			width: 100%
+			background-color: #fff
+			+media(sm)
+				padding: 0 20px
+				padding-bottom: 20px
+
+		&+section
+			padding-top: 165px
+			+media(md)
+				padding-top: 140px
+			+media(sm)
+				padding-top: 52px
 
 	&--blog
 		.main-header__holder
@@ -50,9 +85,9 @@
 
 	&__elem
 		max-width: 900px
-		padding-top: 110px
+		padding-top: 92px
 		+media(sm)
-			padding-top: 92px
+			padding-top: 77px
 
 	&__desc
 		transform-origin: center bottom
@@ -119,9 +154,9 @@
 
 	&__text
 		max-width: 575px
-		padding-bottom: 190px
+		padding-bottom: 175px
 		+media(sm)
-			padding-bottom: 130px
+			padding-bottom: 115px
 		p
 			font-size: 18px
 			line-height: 1.35

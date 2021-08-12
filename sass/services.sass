@@ -8,20 +8,28 @@
 	+media(sm)
 		padding-bottom: 45px
 	&--inner
-		padding-top: 70px
+		margin-top: 55px
 		+media(mdx)
 			padding-bottom: 58px
 		+media(sm)
-			padding-top: 60px
+			margin-top: 45px
 			padding-bottom: 58px
-		.services__wrap
-			padding: 0 50px
-			+media(lgs)
-				padding: 0 20px
-			+media(lgxs)
-				padding: 0px
+		//.services__wrap
+			//padding: 0 50px
+			//+media(lgs)
+			//	padding: 0 20px
+			//+media(lgxs)
+				//padding: 0px
 	&__col
 		position: relative
+		.services__title	
+			width: 480px
+			//margin: 0 50px
+			//+media(lgs)
+				//margin: 0px 20px
+			+media(lgxs)
+				width: 100%
+				//margin: 0px
 
 	&__wrap
 		display: flex
@@ -48,16 +56,6 @@
 		+media(sm)
 			font-size: 18px
 
-	&__col
-		.services__title	
-			width: 480px
-			margin: 0 50px
-			+media(lgs)
-				margin: 0px 20px
-			+media(lgxs)
-				width: 100%
-				margin: 0px
-
 	&__text
 		padding-top: 30px
 		+media(sm)
@@ -80,7 +78,7 @@
 				margin-left: -5px
 
 	&__desc
-		max-width: 475px
+		max-width: 508px
 		margin-left: auto
 		+media(lgxs)
 			margin-left: 0px
@@ -91,6 +89,52 @@
 			line-height: 1.35
 			color: #292929
 			font-family: Avenir
+			padding-bottom: 45px
 			font-weight: 500
+			+media(md)
+				padding-bottom: 35px
 			+media(sm)
 				font-size: 14px
+				padding-bottom: 25px
+
+	&__wrap-btn
+		display: flex
+		max-width: 508px
+		margin-left: auto
+		+media(lgxs)
+			margin-left: 0px
+			max-width: initial
+		+media(xxs)
+			display: block
+
+	&__btn
+		display: block
+		width: 100%
+		font-size: 14px
+		line-height: 1.2
+		color: #e74011
+		border: 1px solid #e74011
+		background-color: #fff
+		outline: none
+		text-align: center
+		text-transform: uppercase
+		padding: 11px 5px
+		font-family: Avenir
+		font-weight: 500
+		transition: 0.3s background-color, 0.3s color
+		&:hover
+			background-color: #e74011
+			color: #fff
+
+		&--cases
+			max-width: 180px
+			margin-right: 30px
+			+media(xxs)
+				max-width: 100%	
+				margin-right: 0px
+				margin-bottom: 20px
+
+		&--block
+			max-width: 260px
+			+media(xxs)
+				max-width: 100%	

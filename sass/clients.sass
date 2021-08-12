@@ -1,20 +1,25 @@
 @import 'responsive'
 
 .clients
-	padding-bottom: 15px
+	padding-bottom: 35px
+	+media(lgxs)
+		padding-bottom: 60px
 	&__wrap
 		display: flex
 		flex-wrap: wrap
+		+media(lgxs)
+			position: relative
 
 	&__item
 		&--block
 			width: 480px
+			display: flex
+			flex-direction: column
 			+media(lgxs)
 				width: 100%
 		&--gallery
-			width: calc(100% - 520px)
-			padding-top: 30px
-			margin-left: 40px
+			width: calc(100% - 630px)
+			margin-left: 150px
 			overflow: hidden
 			+media(lgxs)
 				width: 100%
@@ -54,29 +59,27 @@
 
 
 	&__holder
-		display: flex
-		align-items: center
-		flex-wrap: wrap
-		margin: 0 -40px 0 0
-		+media(lgxs)
-			margin: 0 -40px
+		//display: flex
+		//align-items: center
+		//flex-wrap: wrap
+		margin: 0 -40px
+		//+media(lgxs)
+			//margin: 0 -40px
 
 	&__box
-		width: calc(100% / 3 - 80px)
-		display: inline-flex
-		justify-content: center
-		align-items: center
-		margin: 0 40px
-		margin-bottom: 70px
+		//width: calc(100% / 3 - 80px)
+		//display: inline-flex
+		////justify-content: center
+		//align-items: center
 		filter: grayscale(1) 
 		opacity: 0.8
 		cursor: pointer
+		margin: 0 40px
+		margin-bottom: 50px
 		transition: 0.3s filter, 0.3s opacity
-		+media(md)
-			margin-bottom: 50px
 		+media(xs)
-			width: calc(50% - 40px)
-			margin: 0 20px 70px
+			//width: calc(50% - 40px)
+			//margin: 0 20px 70px
 
 		&:hover
 			filter: grayscale(0)
@@ -84,5 +87,55 @@
 
 		img
 			display: block
-			max-width: 140px
-			max-height: 100px
+			//max-width: 135px
+			//max-height: 100px
+			margin: 0 auto
+
+	.slick-slide
+		&>div
+			display: flex
+			align-items: center
+
+	&__wrap-arrow
+		display: flex
+		margin-top: auto
+		position: relative
+		top: -50px
+		+media(lgxs)
+			position: absolute
+			top: initial
+			bottom: -20px
+
+	&__arrow
+		position: relative
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 30px
+		height: 30px
+		padding: 0px
+		&:after
+			position: absolute
+			content: ' '
+			width: 16px
+			height: 16px
+			top: calc(50% - 8px)
+			left: calc(50% - 7px)
+			border-left: 4px solid #292929
+			border-top: 4px solid #292929
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:before
+			position: absolute
+			content: ' '
+			left: 10px
+			top: calc(50% - 2px)
+			width: 18px
+			height: 4px
+			background-color: #292929
+
+		&--dir_right
+			transform: scaleX(-1)
+			margin-left: 25px
