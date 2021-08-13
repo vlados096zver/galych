@@ -1911,6 +1911,10 @@ img {
 	align-items: center;
 }
 
+.gallery__item {
+	padding: 0 20px;
+}
+
 .gallery__arrows {
 	display: flex;
 	justify-content: space-between;
@@ -2556,6 +2560,10 @@ img {
 
 .page-project__title {
 	font-size: 48px;
+}
+
+.gallery__item {
+	padding: 0 32px;
 }
 
 .single {
