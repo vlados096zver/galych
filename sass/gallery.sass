@@ -1,83 +1,135 @@
 @import 'responsive'
 
 .gallery
-
+	margin-bottom: 40px	
 	.reviews__link
 		+media(sm)
 			width: 100%
 			max-width: 100%
 			margin-bottom: 40px
 
+	&__block
+		position: relative
+
 	&__wrap
+		max-height: calc(100vh - 200px)
+		.slick-track
+			display: flex	
+			align-items: center
+
+	&__arrows
+		display: flex
+		justify-content: space-between
+		position: absolute
+		width: 100%
+		top: 50%
+		transform: translateY(-50%)
+
+	&__arrow
+		position: relative
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 30px
+		height: 30px
+		padding: 0px
+		&:after
+			position: absolute
+			content: ' '
+			width: 16px
+			height: 16px
+			top: calc(50% - 8px)
+			left: calc(50% - 7px)
+			border-left: 4px solid #292929
+			border-top: 4px solid #292929
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		&:before
+			position: absolute
+			content: ' '
+			left: 10px
+			top: calc(50% - 2px)
+			width: 18px
+			height: 4px
+			background-color: #292929
+
+		&--dir_right
+			transform: scaleX(-1)
+
 		
 	&__row
-		display: flex
-		flex-wrap: wrap
-		padding-bottom: 40px
+		//display: flex
+		//flex-wrap: wrap
+		//padding-bottom: 40px
 
 		&--center
-			max-width: 810px
-			width: 100%	
-			margin: 0 auto
-			+media(sm)
-				max-width: 100%
-			.gallery__item
-				width: 100%
-				max-height: none
-				padding-top: 0
+			//max-width: 810px
+			//width: 100%	
+			//margin: 0 auto
+			//+media(sm)
+			//	max-width: 100%
+			//.gallery__item
+				//width: 100%
+				//max-height: none
+				//padding-top: 0
 
-				img
-					display: block
-					width: 100%
+				//img
+					//display: block
+					//width: 100%
 
-		&--right
-			.gallery__item
-				&:nth-child(1)
-					width: calc(100% - 410px)
-					margin-right: 40px
-					+media(md)
-						width: 100%
-						margin-right: 0
-						margin-bottom: 40px
+		//&--right
+			//.gallery__item
+				//&:nth-child(1)
+					//width: calc(100% - 410px)
+					//margin-right: 40px
+					//+media(md)
+						//width: 100%
+						//margin-right: 0
+						//margin-bottom: 40px
 
-				&:nth-child(2)
-					width: 370px
-					+media(md)
-						width: 100%
+				//&:nth-child(2)
+					//width: 370px
+					//+media(md)
+						//width: 100%
 
-		&--left
-			.gallery__item
-				&:nth-child(1)
-					width: 370px
-					+media(md)
-						width: 100%
-						margin-bottom: 40px
+		//&--left
+			//.gallery__item
+				//&:nth-child(1)
+					//width: 370px
+					//+media(md)
+						//width: 100%
+						//margin-bottom: 40px
 
-				&:nth-child(2)
-					width: calc(100% - 410px)
-					margin-left: 40px
-					+media(md)
-						width: 100%
-						margin-left: 0
+				//&:nth-child(2)
+					//width: calc(100% - 410px)
+				//	margin-left: 40px
+				//	+media(md)
+					//	width: 100%
+						//margin-left: 0
 
 				
 
 	&__item
-		position: relative
-		max-height: 480px
-		+media(md)
-			max-height: none
-
-		video
-			width: 100%
-			height: 100%
-
 		img
-			display: block
-			width: 100%
-			height: 100%
-			object-fit: cover
-			object-position: center
+			display: block	
+			margin: 0 auto
+		//position: relative
+		//max-height: 480px
+		//+media(md)
+			//max-height: none
+
+		//video
+			//width: 100%
+			//height: 100%
+
+		//img
+			//display: block
+			//width: 100%
+			//height: 100%
+			//object-fit: cover
+			//object-position: center
 
 	
 

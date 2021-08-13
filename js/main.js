@@ -7,9 +7,10 @@ $(document).ready(function () {
   });
 
  $(".page-project__box").click(function() {
+    $('.shop__gallery').slick('setPosition');
     $(".page-project__box").removeClass("page-project__box--active").eq($(this).index()).addClass("page-project__box--active");
     var index = $(this).index();
-    $(".gallery__wrap").hide().eq(index).fadeIn()
+    $(".gallery__wrap").hide().eq(index).fadeIn();
   }).eq(0).addClass("page-project__box--active");
 
 $('.mobile-wrap').on('click', function () {
@@ -26,6 +27,24 @@ $(window).resize(function () {
 
     changeElem();
 });
+
+  var  gallery = $('.gallery__wrap');
+    let arrows = $('.gallery__block').find('.gallery__arrow');
+    gallery.slick({
+      infinite: true,
+      // speed: 600,
+      slidesToShow: 1,
+      // autoplay: true,
+      //autoplaySpeed:5000,
+      draggable: true,
+      fade: false,
+      arrows: true,
+      appendArrows: $('.gallery__arrows'),
+      prevArrow: '<button class="gallery__arrow gallery__arrow--dir_left"></button>',
+     nextArrow: '<button class="gallery__arrow gallery__arrow--dir_right"></button>',
+      dots: false,
+    });
+
 
 (function() {
     setTimeout(function() {
